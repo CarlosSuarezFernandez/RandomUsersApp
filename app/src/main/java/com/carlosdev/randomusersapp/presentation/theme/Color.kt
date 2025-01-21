@@ -1,4 +1,4 @@
-package com.carlosdev.randomusersapp.ui.theme
+package com.carlosdev.randomusersapp.presentation.theme
 
 import androidx.compose.ui.graphics.Color
 

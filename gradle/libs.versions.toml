@@ -1,5 +1,6 @@
 [versions]
 agp = "8.7.3"
+coilCompose = "3.0.4"
 compiler = "3.2.0-alpha11"
 gradlePlugin = "3.0.0"
 guava = "32.1.3-android"
@@ -11,6 +12,9 @@ coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
+kotlinxCoroutinesCore = "1.7.0"
+libraryBaseVersion = "1.16.0"
+librarySync = "1.16.0"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
 composeBom = "2025.01.00"
@@ -22,12 +26,14 @@ ktorClientCore = "2.3.12"
 ktorClientLogging = "2.3.12"
 kotlinxSerializationJson = "1.6.3"
 ktorSerializationKotlinxJson = "2.3.12"
+realmDb = "2.3.0"
 
 
 [libraries]
 androidx-compiler = { module = "androidx.databinding:compiler", version.ref = "compiler" }
 androidx-core-ktx = { group = "androidx.core", name = "core-ktx", version.ref = "coreKtx" }
 androidx-navigation-compose = { module = "androidx.navigation:navigation-compose", version.ref = "navigationCompose" }
+coil-compose = { module = "io.coil-kt.coil3:coil-compose", version.ref = "coilCompose" }
 gradle-plugin = { module = "io.realm.kotlin:gradle-plugin", version.ref = "gradlePlugin" }
 guava = { module = "com.google.guava:guava", version.ref = "guava" }
 insert-koin-koin-core = { module = "io.insert-koin:koin-core", version.ref = "koinCore" }
@@ -53,6 +59,8 @@ koin-core = { module = "io.insert-koin:koin-core" }
 koin-compose-viewmodel = { module = "io.insert-koin:koin-compose-viewmodel", version.ref = "koinCore" }
 koin-compose-viewmodel-navigation = { module = "io.insert-koin:koin-compose-viewmodel-navigation", version.ref = "koinCore" }
 koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koinTestJunit4" }
+kotlin-library-base-v1160 = { module = "io.realm.kotlin:library-base", version.ref = "libraryBaseVersion" }
+kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
 library-base = { module = "io.realm.kotlin:library-base", version.ref = "gradlePlugin" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientCore" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
@@ -60,11 +68,13 @@ ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "k
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCore" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorSerializationKotlinxJson" }
+library-sync = { module = "io.realm.kotlin:library-sync", version.ref = "librarySync" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
 kotlin-android = { id = "org.jetbrains.kotlin.android", version.ref = "kotlin" }
 kotlin-compose = { id = "org.jetbrains.kotlin.plugin.compose", version.ref = "kotlin" }
 kotlin-serialization = { id = "org.jetbrains.kotlin.plugin.serialization", version.ref = "kotlin" }
+realm-kotlin = { id = "io.realm.kotlin", version.ref = "realmDb" }
 
 

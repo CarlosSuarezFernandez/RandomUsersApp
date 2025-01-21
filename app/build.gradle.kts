@@ -3,6 +3,7 @@ plugins {
     alias(libs.plugins.kotlin.android)
     alias(libs.plugins.kotlin.compose)
     alias(libs.plugins.kotlin.serialization)
+    alias(libs.plugins.realm.kotlin)
 }
 
 android {
@@ -77,4 +78,7 @@ dependencies {
     implementation(libs.ktor.serialization.kotlinx.json)
     // Exclude listenablefuture from guava
     implementation(libs.guava)
+    implementation(libs.library.sync)
+    implementation(libs.kotlinx.coroutines.core)
+    implementation(libs.coil.compose)
 }
