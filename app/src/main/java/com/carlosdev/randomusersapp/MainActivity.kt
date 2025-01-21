@@ -9,39 +9,24 @@ import androidx.compose.foundation.layout.padding
 import androidx.compose.material3.Scaffold
 import androidx.compose.material3.Text
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.LaunchedEffect
 import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
-import com.carlosdev.randomusersapp.ui.theme.RandomUsersAppTheme
+import androidx.compose.ui.unit.dp
+import com.carlosdev.randomusersapp.domain.usecase.GetRandomUsersUsecase
+import com.carlosdev.randomusersapp.presentation.theme.RandomUsersAppTheme
+import kotlinx.coroutines.coroutineScope
+import org.koin.android.ext.android.inject
 
 class MainActivity : ComponentActivity() {
+
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         enableEdgeToEdge()
         setContent {
             RandomUsersAppTheme {
-                Scaffold(modifier = Modifier.fillMaxSize()) { innerPadding ->
-                    Greeting(
-                        name = "Android",
-                        modifier = Modifier.padding(innerPadding)
-                    )
-                }
+
             }
         }
-    }
-}
-
-@Composable
-fun Greeting(name: String, modifier: Modifier = Modifier) {
-    Text(
-        text = "Hello $name!",
-        modifier = modifier
-    )
-}
-
-@Preview(showBackground = true)
-@Composable
-fun GreetingPreview() {
-    RandomUsersAppTheme {
-        Greeting("Android")
     }
 }
