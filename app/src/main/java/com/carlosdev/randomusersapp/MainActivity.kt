@@ -14,6 +14,8 @@ import androidx.compose.ui.Modifier
 import androidx.compose.ui.tooling.preview.Preview
 import androidx.compose.ui.unit.dp
 import com.carlosdev.randomusersapp.domain.usecase.GetRandomUsersUsecase
+import com.carlosdev.randomusersapp.presentation.MainScreen
+import com.carlosdev.randomusersapp.presentation.UsersList
 import com.carlosdev.randomusersapp.presentation.theme.RandomUsersAppTheme
 import kotlinx.coroutines.coroutineScope
 import org.koin.android.ext.android.inject
@@ -25,7 +27,7 @@ class MainActivity : ComponentActivity() {
         enableEdgeToEdge()
         setContent {
             RandomUsersAppTheme {
-
+                MainScreen()
             }
         }
     }
