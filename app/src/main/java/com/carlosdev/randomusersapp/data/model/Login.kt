@@ -1,6 +1,10 @@
 package com.carlosdev.randomusersapp.data.model
 
+import kotlinx.serialization.Serializable
+
+@Serializable
 data class Login(
+    val uuid: String,
     val username: String,
     val password: String,
     val salt: String,

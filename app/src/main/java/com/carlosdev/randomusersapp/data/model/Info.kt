@@ -3,8 +3,9 @@ package com.carlosdev.randomusersapp.data.model
 import kotlinx.serialization.Serializable
 
 @Serializable
-data class Name(
-    val title: String,
-    val first: String,
-    val last: String
+data class Info(
+    val seed: String,
+    val results: Int,
+    val page: Int,
+    val version: String
 )
