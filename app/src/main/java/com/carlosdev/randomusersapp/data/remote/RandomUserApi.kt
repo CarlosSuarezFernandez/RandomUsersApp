@@ -18,6 +18,7 @@ class RandomUserApi : IRandomUserApi {
             }
         }
         val url = BASE_URL
+
         return client.get(url).body()
     }
 
