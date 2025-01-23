@@ -58,15 +58,18 @@ class UsersViewModel(
 }
 
     fun filterUsers(searchTerm: String) {
-        _users.value = if (searchTerm.isEmpty()) {
-            allUsers
-        } else {
-            allUsers.filter { user ->
-                user.name.first.contains(searchTerm, ignoreCase = true) ||
-                        user.name.last.contains(searchTerm, ignoreCase = true) ||
-                        user.email.contains(searchTerm, ignoreCase = true)
+        viewModelScope.launch {
+            _users.value = if (searchTerm.isEmpty()) {
+                allUsers
+            } else {
+                allUsers.filter { user ->
+                    user.name.first.contains(searchTerm, ignoreCase = true) ||
+                            user.name.last.contains(searchTerm, ignoreCase = true) ||
+                            user.email.contains(searchTerm, ignoreCase = true)
+                }
             }
         }
+
     }
 
     fun getUserById(userId: String) {
