@@ -12,12 +12,21 @@ coreKtx = "1.15.0"
 junit = "4.13.2"
 junitVersion = "1.2.1"
 espressoCore = "3.6.1"
-kotlinxCoroutinesCore = "1.7.0"
+kotlinxCoroutinesCore = "1.9.0"
+ktorClientCio = "2.0.0"
+ktorClientContentNegotiation = "2.0.0"
+ktorClientJson = "2.0.0"
+ktorClientLoggingVersion = "2.0.0"
+ktorClientPlugins = "2.0.0"
+ktorClientSerialization = "2.0.0"
+ktorClientSerializationJvm = "2.0.0"
+ktorKtorClientCore = "2.0.0"
 libraryBaseVersion = "1.16.0"
 librarySync = "2.3.0"
 lifecycleRuntimeKtx = "2.8.7"
 activityCompose = "1.10.0"
 composeBom = "2025.01.00"
+mockk = "1.13.16"
 navigationCompose = "2.8.5"
 koinAnnotations = "v1.4.0-RC4"
 koin-bom = "4.0.0"
@@ -25,6 +34,7 @@ ktorClientAndroid = "2.3.12"
 ktorClientCore = "2.3.12"
 ktorClientLogging = "2.3.12"
 kotlinxSerializationJson = "1.6.3"
+kotlinx-test = "1.9.0"
 ktorSerializationKotlinxJson = "2.3.12"
 realmDb = "2.3.0"
 
@@ -62,14 +72,24 @@ koin-compose-viewmodel-navigation = { module = "io.insert-koin:koin-compose-view
 koin-test-junit4 = { module = "io.insert-koin:koin-test-junit4", version.ref = "koinTestJunit4" }
 kotlin-library-base-v1160 = { module = "io.realm.kotlin:library-base", version.ref = "realmDb" }
 kotlinx-coroutines-core = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-core", version.ref = "kotlinxCoroutinesCore" }
+ktor-client-cio = { module = "io.ktor:ktor-client-cio", version.ref = "ktorClientCio" }
+ktor-client-content-negotiation-v200 = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientContentNegotiation" }
+ktor-client-core-v200 = { module = "io.ktor:ktor-client-core", version.ref = "ktorKtorClientCore" }
+ktor-client-json = { module = "io.ktor:ktor-client-json", version.ref = "ktorClientJson" }
+ktor-client-logging-v200 = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLoggingVersion" }
+ktor-client-plugins = { module = "io.ktor:ktor-client-plugins", version.ref = "ktorClientPlugins" }
+ktor-client-serialization = { module = "io.ktor:ktor-client-serialization", version.ref = "ktorClientSerialization" }
+ktor-client-serialization-jvm = { module = "io.ktor:ktor-client-serialization-jvm", version.ref = "ktorClientSerializationJvm" }
 library-base = { module = "io.realm.kotlin:library-base", version.ref = "realmDb" }
 ktor-client-content-negotiation = { module = "io.ktor:ktor-client-content-negotiation", version.ref = "ktorClientCore" }
 kotlinx-serialization-json = { module = "org.jetbrains.kotlinx:kotlinx-serialization-json", version.ref = "kotlinxSerializationJson" }
+kotlinx-coroutines-test = { module = "org.jetbrains.kotlinx:kotlinx-coroutines-test", version.ref = "kotlinx-test" }
 ktor-client-android = { module = "io.ktor:ktor-client-android", version.ref = "ktorClientAndroid" }
 ktor-client-core = { module = "io.ktor:ktor-client-core", version.ref = "ktorClientCore" }
 ktor-client-logging = { module = "io.ktor:ktor-client-logging", version.ref = "ktorClientLogging" }
 ktor-serialization-kotlinx-json = { module = "io.ktor:ktor-serialization-kotlinx-json", version.ref = "ktorSerializationKotlinxJson" }
 library-sync = { module = "io.realm.kotlin:library-sync", version.ref = "librarySync" }
+mockk = { module = "io.mockk:mockk", version.ref = "mockk" }
 
 [plugins]
 android-application = { id = "com.android.application", version.ref = "agp" }
