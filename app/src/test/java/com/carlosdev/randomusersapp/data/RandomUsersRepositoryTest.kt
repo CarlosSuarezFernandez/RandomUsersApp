@@ -28,7 +28,6 @@ class RandomUsersRepositoryTest {
     private lateinit var api: RandomUserApi
     private lateinit var database: RealmDatabase
     private lateinit var repository: RandomUsersRepository
-    private lateinit var fakeUsers: List<User>
     private lateinit var fakeUser: User
     private lateinit var fakeUser2: User
     private lateinit var fakeUser3: User
